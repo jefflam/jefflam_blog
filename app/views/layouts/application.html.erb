@@ -12,9 +12,11 @@
 <body class="<%= controller_name %> <%= action_name %>">
   <% unless @no_header %>
   <header>
+    <%= image_tag 'logo.png' %>
     <h1><%= link_to CONFIG['title'], root_url %></h1>
     <span><%= CONFIG['tagline'].html_safe %></span>
     <ul>
+        <li><%= link_to "facebook", "http://facebook.com/jefflamth" %></li>      
       <% if CONFIG['twitter'] %>
         <li><%= link_to '@' + CONFIG['twitter'], 'http://twitter.com/' + CONFIG['twitter'] %></li>
       <% end %>
@@ -25,9 +27,10 @@
         <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
       <% end %>
       <li><%= link_to 'rss feed', '/posts.rss' %></li>
+      <li><%= link_to "ruuva", "http://ruuva.com/" %></li>      
+      <li><%= link_to "quizfunnel", "http://quizfunnel.com/" %></li>      
     </ul>
     <span class="powered-by">
-      Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
   </span>
 
