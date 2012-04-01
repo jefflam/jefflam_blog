@@ -1,0 +1,10 @@
+---
+title:               Jeff Lam T. H.
+tagline:             "Thoughts, ideas on life, business and everything in between."
+login:               <%= ENV["obtvse_login"] ? ENV["obtvse_login"] : "jefflamth@gmail.com" %>
+password:            <%= ENV["obtvse_password"] ? ENV["obtvse_password"] : "jefflam" %>
+name:                Jeff Lam Tian Hung
+twitter:             jefflamth
+github:              jefflam
+email:               jefflamth@gmail.com
+google_analytics_id: YOUR_GA_ID
