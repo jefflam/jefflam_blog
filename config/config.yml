@@ -1,6 +1,6 @@
 ---
-title:               jefflamth
-tagline:             Jeff Lam Tian Hung is a Geekstah.
+title:               Jeff Lam
+tagline:             "Musings, Ideas, Thoughts, Business and random Geeking."
 login:               <%= ENV["obtvse_login"] ? ENV["obtvse_login"] : "jefflamth@gmail.com" %>
 password:            <%= ENV["obtvse_password"] ? ENV["obtvse_password"] : "jefflam" %>
 name:                Jeff Lam Tian Hung
