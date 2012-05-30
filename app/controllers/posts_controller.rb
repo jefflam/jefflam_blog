@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.page(params[:page]).per(10).where(draft:false)
+		@posts_sorted = @posts.sort_by(&:updated_at).reverse
 		session[:test] = true
 
 		respond_to do |format|
