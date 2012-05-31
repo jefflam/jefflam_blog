@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.page(params[:page]).per(10).where(draft:false)
-		@posts_sorted = @posts.sort_by(&:updated_at).reverse # small hack to arrange posts in order of published 
 		session[:test] = true
 
 		respond_to do |format|
@@ -28,7 +27,6 @@ class PostsController < ApplicationController
 		@no_header = true
 		@post = Post.new
 		@published = Post.where(draft:false).page(params[:post_page]).per(20)
-		@published_sorted = @published.sort_by(&:updated_at).reverse # small hack to arrange posts in order of published
 		@drafts = Post.where(draft:true).page(params[:draft_page]).per(20)
 
 		respond_to do |format|

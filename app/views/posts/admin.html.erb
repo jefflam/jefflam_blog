@@ -12,7 +12,7 @@
 <div id="published" class="col">
   <h2>Published <%= link_to 'Home', root_url, :class => 'button' %></h2>
   <ul>
-    <%= render :partial => 'li', :collection => @published_sorted %>
+    <%= render :partial => 'li', :collection => @published %>
   </ul>
   <%= paginate @published, :param_name => "post_page" %>
 </div>
