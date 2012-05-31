@@ -36,6 +36,10 @@
             <%= f.label :url, 'URL' %>
             <%= f.text_field :url, :placeholder => 'Optional external link' %>
           </li>
+           <li>
+            <%= f.label :created_at, 'Created At Date' %>
+            <%= f.text_field :created_at, :placeholder => '#{@post.created_at}' %>
+          </li>             
         </ul>
       </div>
       <div class="right">

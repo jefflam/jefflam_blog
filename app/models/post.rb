@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :slug, presence: true, uniqueness: true
   acts_as_url :title, :url_attribute => :slug
+  attr_accessible :title, :content, :slug, :url, :draft, :created_at, :id
 
   default_scope order('created_at desc')
 
